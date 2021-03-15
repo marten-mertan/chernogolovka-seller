@@ -87,6 +87,8 @@
             padding: 8px 30px 8px 15px;
             border-radius: 4px;
             -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
             font-family: 'Montserrat', sans-serif;
             font-style: normal;
             font-weight: 400;
@@ -95,6 +97,10 @@
             color: #333;
             cursor: pointer;
             z-index: 2;
+
+            &::-ms-expand {
+                display: none;
+            }
 
             @media screen and (min-width: 768px) {
                 padding: 14px 40px 14px 20px;

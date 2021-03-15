@@ -36,7 +36,7 @@
             width: 100%;
             margin-bottom: 15px;
         }
-        
+
         h1 {
             font-style: normal;
             font-weight: 500;
@@ -322,6 +322,7 @@
                 border-spacing: 2px 0;
                 text-decoration: none;
                 margin: 0 auto;
+                align-self: center;
                 @media screen and (min-width: 768px) {
                     font-size: 15px;
                     line-height: 20px;

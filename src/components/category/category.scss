@@ -180,14 +180,15 @@
                 img {
                     display: block;
                     height: 144px;
-                    filter: grayscale(0%);
                     transition: all .4s ease;
+                    opacity: 1;
 
                     @media screen and (min-width: 768px) {
                         height: 235px;
                     }
 
                     &.disabled {
+                        opacity: .3;
                         filter: grayscale(100%);
                     }
                 }
@@ -286,6 +287,7 @@
                 border-spacing: 2px 0;
                 text-decoration: none;
                 margin: 0 auto;
+                align-self: center;
 
                 @media screen and (min-width: 768px) {
                     font-size: 15px;
