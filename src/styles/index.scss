@@ -1,6 +1,10 @@
 @import 'parts/*.scss';
 @import '../components/**/*.scss';
 
+body {
+    overflow-x: hidden;
+}
+
 .site {
     width: 100%;
     min-height: 100vh;
@@ -377,7 +381,7 @@
     padding: 0 6px 0 0;
 }
 
-.select2-container {
+.select2.select2-container {
     width: 100% !important;
 }
 

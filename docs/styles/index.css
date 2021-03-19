@@ -1093,6 +1093,9 @@ div {
           font-size: 15px;
           line-height: 22px; } }
 
+body {
+  overflow-x: hidden; }
+
 .site {
   width: 100%;
   min-height: 100vh;
@@ -1388,7 +1391,7 @@ div {
 .select2-container--default .select2-selection--multiple .select2-selection__choice__display {
   padding: 0 6px 0 0; }
 
-.select2-container {
+.select2.select2-container {
   width: 100% !important; }
 
 .select2-selection__arrow b {
