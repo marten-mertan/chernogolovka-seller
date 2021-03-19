@@ -24,7 +24,7 @@ $(window).load(function(){
 
   $(document).on('click', '.js-clear-filter', function(e) {
     e.preventDefault();
-    $('.js-select select').val(0);
+    $('.js-select select').val(0).trigger("change");
     $('.js-dis-img img').each(function(e) {
         $(this).removeClass('disabled');
     });
@@ -48,4 +48,13 @@ $(window).load(function(){
     }
  });
 
+ $('.js-multiselect').select2({
+     tags: false,
+     minimumResultsForSearch: Infinity
+ });
+
+ $('.js-multiselect').on('select2:opening select2:closing', function( event ) {
+    let $searchfield = $(this).parent().find('.select2-search__field');
+    $searchfield.prop('disabled', true);
+});
 });
