@@ -50,6 +50,12 @@ $(window).load(function(){
 
     $('.js-multiselect').select2({
         tags: false,
+        minimumResultsForSearch: Infinity,
+        closeOnSelect: false
+    });
+
+    $('.js-singleselect').select2({
+        tags: false,
         minimumResultsForSearch: Infinity
     });
 
