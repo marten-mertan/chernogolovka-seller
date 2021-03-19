@@ -57,8 +57,4 @@ $(window).load(function(){
         let $searchfield = $(this).parent().find('.select2-search__field');
         $searchfield.prop('disabled', true);
     });
-
-    if ( /iPhone|iPad|iPod/i.test(navigator.userAgent) ) {
-        $('.js-multiselect').select2('destroy');
-       }
 });
