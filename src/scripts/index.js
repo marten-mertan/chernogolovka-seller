@@ -31,18 +31,19 @@ $(window).load(function(){
     });
 
     $(document).on('change','.js-dis-select select',function (e) {
-        let value =  $(this).val().toString();
-        if (value === '0') {
+        let value =  $(this).val();
+        if (!value) {
             $('.js-dis-img img').each(function(e) {
                 $(this).removeClass('disabled');
             });
         } else {
             $('.js-dis-img img').each(function(e) {
                 let data = $(this).data('displacement').toString();
-                if (data === value) {
-                    $(this).removeClass('disabled');
-                } else {
-                    $(this).addClass('disabled');
+                $(this).addClass('disabled');
+                for (v of value) {
+                    if (data == v) {
+                        $(this).removeClass('disabled');
+                    } 
                 }
             });
         }

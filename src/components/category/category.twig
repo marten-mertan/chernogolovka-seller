@@ -8,7 +8,7 @@
             <div class="form">
                 <div class="form-row">
                     <label class="form-select js-select">
-                        <select name="brand" class="js-multiselect" multiple="multiple" data-placeholder="Все бренды">
+                        <select name="brand" class="js-multiselect" multiple="multiple" data-placeholder="Выберите бренд">
                             <option value="1">Черноголовка</option>
                             <option value="2">Байкал 1977</option>
                             <option value="3">Fantola</option>
@@ -19,8 +19,7 @@
                 </div>
                 <div class="form-row">
                     <label class="form-select js-select js-dis-select">
-                        <select name="displacement" class="js-singleselect">
-                            <option value="0" selected>Все литражи</option>
+                        <select name="displacement" class="js-multiselect" multiple="multiple" data-placeholder="Выберите литраж">
                             <option value="0.5">0,5 л.</option>
                             <option value="1">1 л.</option>
                             <option value="1.5">1,5 л.</option>
@@ -29,14 +28,22 @@
                         <span class="arrow"></span>
                     </label>
                     <label class="form-select js-select">
+                        <select name="taste" class="js-multiselect" multiple="multiple" data-placeholder="Выберите вкус">
+                            <option value="0.5">Байкал</option>
+                            <option value="1">Тархун</option>
+                            <option value="1.5">Дюшес</option>
+                        </select>
+                        <span class="arrow"></span>
+                    </label>
+                    {# <label class="form-select js-select">
                         <select name="taste" class="js-singleselect">
-                            <option value="0" selected>Все вкусы</option>
+                            <option value="0" selected>Выберите вкус</option>
                             <option value="1">Байкал</option>
                             <option value="2">Тархун</option>
                             <option value="3">Дюшес</option>
                         </select>
                         <span class="arrow"></span>
-                    </label>
+                    </label> #}
                 </div>
                 <div class="form-row">
                     <label class="form-clear">
