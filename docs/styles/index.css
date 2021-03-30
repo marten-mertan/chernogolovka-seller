@@ -683,6 +683,10 @@ div {
     text-transform: uppercase;
     color: #999; }
 
+.header {
+  min-width: 2480px;
+  max-width: 2480px; }
+
 .header-wrap {
   display: flex;
   flex-direction: row;
@@ -992,6 +996,13 @@ div {
       @media screen and (min-width: 768px) {
         .main-btn.mod-big {
           padding: 25px 40px; } }
+
+.pdf {
+  max-width: 2480px;
+  min-width: 2480px;
+  width: 2272px;
+  padding: 0 104px;
+  margin: 0 auto; }
 
 .promos {
   position: relative; }
