@@ -129,7 +129,7 @@
                 &-slide {
                     display: none;
                     background: url("../assets/img/catalog-item-mobile.jpg") 50% 50% no-repeat;
-                    background-size: cover;
+                    background-size: contain;
                     height: 160px;
 
                     @media screen and (min-width: 768px) {

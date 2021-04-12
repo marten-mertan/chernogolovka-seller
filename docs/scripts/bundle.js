@@ -95,7 +95,17 @@ $(window).load(function(){
         controlNav: false,
         prevText: "",
         nextText: "",
+        slideshow: false
+    });
+
+    $('.js-equipment-slider-no-arrows').flexslider({
+        animation: "slide",
+        animationLoop: true,
+        controlNav: false,
+        prevText: "",
+        nextText: "",
         slideshow: false,
+        directionNav: false
     });
 
     $(document).on('click', '.js-desc-open', function(e) {
