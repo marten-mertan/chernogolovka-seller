@@ -15,7 +15,7 @@
         overflow: hidden;
         margin: 0 auto 30px;
 
-        img {
+        img, a, div {
             display: block;
             transition: all .4s ease;
             opacity: 1;
@@ -24,6 +24,7 @@
             min-height: 0;
             max-height: 100%;
             min-width: 0;
+            max-width: 100%;
 
             &:not(:last-child) {
                 margin-right: 6px;
