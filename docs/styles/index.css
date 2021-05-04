@@ -862,7 +862,8 @@ div {
 
 .popup {
   position: relative;
-  background-color: #fff; }
+  background-color: #fff;
+  overflow-y: auto; }
   @media screen and (max-width: 767px) {
     .popup {
       height: 100%; } }
