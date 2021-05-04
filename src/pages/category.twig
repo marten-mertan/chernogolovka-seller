@@ -24,13 +24,16 @@
 		<div id="panel"></div>
 		<div class="site">
 
-			{% include "../components/header/header.twig" %}
+			{% include "../components/header/header-category.twig" %}
 			
 			<div class="main">
 				{% include "../components/category/category.twig" %}
 			</div>
 
 			{% include "../components/footer/footer.twig" %}
+
+			{% include "../components/filter-popup/filter-popup.twig" %}
+
 
 		</div>
         <script src="scripts/vendor/jquery-2.1.3.min.js"></script>
