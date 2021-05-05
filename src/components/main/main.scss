@@ -5,6 +5,12 @@
     @media screen and (min-width: 768px) {
         overflow: hidden;
     }
+    &.mod-header-steaky {
+        padding-top: 210px;
+        @media screen and (min-width: 768px) {
+            padding-top: 197px;
+        }
+    }
     &-wrap {
         position: relative;
         padding: 0 16px 50px;

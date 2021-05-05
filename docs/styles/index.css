@@ -225,6 +225,9 @@ div {
 
 .category {
   position: relative; }
+  @media screen and (min-width: 768px) {
+    .category {
+      padding-top: 20px; } }
   .category-wrap {
     position: relative;
     padding: 0 16px 10px;
@@ -243,6 +246,9 @@ div {
       .category-top {
         align-items: center;
         margin-bottom: 30px; } }
+  @media screen and (min-width: 768px) {
+    .category-block {
+      padding: 10px 0; } }
   .category-title {
     display: flex;
     align-items: center;
@@ -350,7 +356,7 @@ div {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      margin-bottom: 20px; } }
+      margin-bottom: 10px; } }
   .category-catalog-item {
     display: flex;
     flex-direction: column;
@@ -977,10 +983,6 @@ div {
     @media screen and (min-width: 1200px) {
       .popup-markets-item {
         margin-right: 70px; } }
-    .popup-markets-item.active .popup-markets-item__icon svg {
-      fill: #30a657; }
-    .popup-markets-item.active .popup-markets-item__text {
-      color: #30a657; }
     .popup-markets-item__icon {
       margin-bottom: 10px; }
     .popup-markets-item__text {
@@ -992,6 +994,24 @@ div {
         .popup-markets-item__text {
           font-size: 15px;
           line-height: 18px; } }
+  .popup-markets-input {
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    z-index: -9999999; }
+    .popup-markets-input:checked + label .popup-markets-item__icon svg {
+      fill: #30a657; }
+    .popup-markets-input:checked + label .popup-markets-item__text {
+      color: #30a657; }
+  .popup-markets-checkbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer; }
 
 .popup-checkbox {
   display: flex;
@@ -1201,6 +1221,17 @@ div {
   min-width: 2480px;
   max-width: 2480px; }
 
+.header.mod-steaky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  z-index: 900; }
+  @media screen and (min-width: 768px) {
+    .header.mod-steaky .header-wrap {
+      padding: 50px 48px 20px; } }
+
 .header-wrap {
   display: flex;
   flex-direction: row;
@@ -1380,6 +1411,11 @@ div {
   @media screen and (min-width: 768px) {
     .main {
       overflow: hidden; } }
+  .main.mod-header-steaky {
+    padding-top: 210px; }
+    @media screen and (min-width: 768px) {
+      .main.mod-header-steaky {
+        padding-top: 197px; } }
   .main-wrap {
     position: relative;
     padding: 0 16px 50px;

@@ -36,18 +36,14 @@ $(window).load(function(){
         e.preventDefault();
         $('.js-select select').val(0).trigger("change");
         $('.js-checkbox input').prop('checked', false);
+        $('.js-market input').prop('checked', false);
         $('.js-dis-img img').each(function(e) {
             $(this).removeClass('disabled');
-        });
-        $('.js-market').each(function(e) {
-            $(this).removeClass('active');
         });
         $(this).addClass('disabled');
     });
 
     $(document).on('click', '.js-market', function(e) {
-        e.preventDefault();
-        $(this).toggleClass('active');
         $('.js-clear-filter').removeClass('disabled');
     });
 
@@ -116,10 +112,9 @@ $(window).load(function(){
         $(document).on("click", elem, function (event) {
             event.preventDefault();
             var id  = $(this).attr('href'),
-                menuHeight = 0,
+                menuHeight = $('.js-header').height(),
                 top = $(id).offset().top,
                 topIndent = top - menuHeight;
-
             $('html').animate({scrollTop: topIndent}, 500);
         });
     };
@@ -127,14 +122,15 @@ $(window).load(function(){
     scrollToAnchor('.js-category-link');
     
     $(document).ready(function(){
-        var $categories = $('.js-category');
+        const $categories = $('.js-category');
         $(window).scroll(function() {
+            const scroll = $(window).scrollTop();
+            const menuheight = $('.js-header').height();
             $categories.each(function(i,el){
-                var top  = $(el).offset().top;
-                var bottom = top + $(el).height();
-                var scroll = $(window).scrollTop();
-                var id = $(el).attr('id');
-                if( scroll > top && scroll < bottom){
+                const top  = $(el).offset().top - 10;
+                const bottom = top + $(el).height();
+                const id = $(el).attr('id');
+                if( scroll + menuheight > top && scroll < bottom){
                     $('.js-category-link.active').removeClass('active');
                     $('.js-category-link[href="#'+id+'"]').addClass('active');
                 }
